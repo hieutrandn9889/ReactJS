@@ -29,6 +29,14 @@ class Four extends Component {
     );
   }
 }
+var UseProps = (props) => (
+  <div>
+      <h1>{props.tieuDe}</h1>
+      <img className="card-img-top" src={props.linkAnh} alt=""/>
+      
+  </div>
+)
+
 
 
 function App() {
@@ -36,6 +44,7 @@ function App() {
     <div className="App">
       <header className="App-header"> 
         <img src={logo} className="App-logo" alt="logo" />
+        <UseProps tieuDe="Dich Benh" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg"/>
         <One/>
         <Two/>
         <Three/>

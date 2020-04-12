@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TopMenu from './Component/TopMenu/TopMenu.js';
+import Header from './Component/Header/Header.js';
+import Content from './Component/Content/Content.js';
 const a1="hieu";
 // khai bao theo ham bt
 function One() {
@@ -95,25 +98,17 @@ class MapApp extends Component {
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <MapApp/>
-        <JSXApp/>
-        <PropsOne tieuDe="Dung props theo cach 1 su dung function" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />
-        <PropsTwo tieuDe="Dung props theo cach 2 su dung class" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />
-        <One />
-        <Two />
-        <Three />
-        <Four />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <TopMenu/>
+     <Header/>
+     <Content tieude ="Test"/>
+      {/* <MapApp/>
+      <JSXApp/>
+      <PropsOne tieuDe="Dung props theo cach 1 su dung function" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />
+      <PropsTwo tieuDe="Dung props theo cach 2 su dung class" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />
+      <One />
+      <Two />
+      <Three />
+      <Four /> */}
     </div>
   );
 }

@@ -39,14 +39,14 @@ class Four extends Component {
 }
 
 // su dung props cach 1
-var UsePropsOne = (props) => (
+var PropsOne = (props) => (
   <div>
     <h1>{props.tieuDe}</h1>
     <img className="card-img-top" src={props.linkAnh} alt="" />
   </div>
 )
 //  su dung props cach 2 >> su dung class de dinh nghia va thao tac voi props
-class UsePropsTwo extends Component {
+class PropsTwo extends Component {
   render() {
     return (
       <div>
@@ -58,7 +58,7 @@ class UsePropsTwo extends Component {
 }
 
 // JSX
-class App1 extends Component {
+class JSXApp extends Component {
   render() {
     return (
       <div>
@@ -74,21 +74,37 @@ class App1 extends Component {
   }
 }
 
+//map
+const so = [1,2,3,4,5,6,7,8,9]
+const so1 = so.map((x) =>(x*2+ ","))
+const so2 = so.map( (x)=> (
+  <li>So: {x}</li>
+));
+class MapApp extends Component {
+  render() {
+    return (
+      <div>
+        {so1}
+        {so2}
+      </div>
+    );
+  }
+}
 
-
-
+//run commom
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <UsePropsOne tieuDe="Dung props theo cach 1 su dung function" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />
-        <UsePropsTwo tieuDe="Dung props theo cach 2 su dung class" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />
+        <MapApp/>
+        <JSXApp/>
+        <PropsOne tieuDe="Dung props theo cach 1 su dung function" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />
+        <PropsTwo tieuDe="Dung props theo cach 2 su dung class" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />
         <One />
         <Two />
         <Three />
         <Four />
-        <App1/>
         <a
           className="App-link"
           href="https://reactjs.org"

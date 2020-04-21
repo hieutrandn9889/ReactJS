@@ -100,7 +100,8 @@ function App() {
     <div className="App">
      <TopMenu/>
      <Header/>
-     <Content tieude ="Test"/>
+     <Content tieude="Test" vitri="order-lg-1"/>
+     <Content tieude="Test"/>
       {/* <MapApp/>
       <JSXApp/>
       <PropsOne tieuDe="Dung props theo cach 1 su dung function" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />

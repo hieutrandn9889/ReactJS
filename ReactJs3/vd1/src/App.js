@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TopMenu from './Component/TopMenu/TopMenu.js';
-import Header from './Component/Header/Header.js';
-import Content from './Component/Content/Content.js';
+import TopMenu from './Component/TopMenu/TopMenu';
+import Header from './Component/Header/Header';
+import Content from './Component/Content/Content';
+import Footer from './Component/Footer/Footer';
 const a1="hieu";
 // khai bao theo ham bt
 function One() {
@@ -100,8 +101,20 @@ function App() {
     <div className="App">
      <TopMenu/>
      <Header/>
-     <Content tieude="Test" vitri="order-lg-1"/>
-     <Content tieude="Test"/>
+     <div className="container">
+        <div className="row pt-5">
+          <Content tieude="Test1" vitri="order-lg-1" anh="img/01.jpg" trichdan="Tin tuc 1"/>
+          <Content tieude="Test2" anh="img/02.jpg" trichdan="Tin tuc 2"/>
+          <Content tieude="Test3" vitri="order-lg-1" anh="img/03.jpg" trichdan="Tin tuc 3"/>
+          <Content tieude="Test1" vitri="order-lg-1" anh="img/01.jpg" trichdan="Tin tuc 1"/>
+          <Content tieude="Test2" anh="img/02.jpg" trichdan="Tin tuc 2"/>
+          <Content tieude="Test3" vitri="order-lg-1" anh="img/03.jpg" trichdan="Tin tuc 3"/>
+          <Content tieude="Test1" vitri="order-lg-1" anh="img/01.jpg" trichdan="Tin tuc 1"/>
+          <Content tieude="Test2" anh="img/02.jpg" trichdan="Tin tuc 2"/>
+          <Content tieude="Test3" vitri="order-lg-1" anh="img/03.jpg" trichdan="Tin tuc 3"/>
+        </div>
+     </div>
+     <Footer/>
       {/* <MapApp/>
       <JSXApp/>
       <PropsOne tieuDe="Dung props theo cach 1 su dung function" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />

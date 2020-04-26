@@ -4,6 +4,10 @@ class Content extends Component {
     // nhan props nen dung constructor
     constructor(props) {
         super(props); // bao toan lai lop cha Component
+        this.state ={
+            trangThai:0
+        }
+        
     }
     thongbao = () =>{
         alert('Edit this item')
@@ -12,6 +16,39 @@ class Content extends Component {
         alert('Remove this item')
     }
     
+    renderButton = () =>(
+        <div className="row">
+            <div className="btn btn-group">
+                <div className="btn btn-info" onClick={() => this.editClick()}>Edit</div>
+                <div className="btn btn-warning" onClick={this.thongbao2}>Remove</div>
+            </div>
+        </div>
+    )
+
+    renderForm = () =>(
+        <div className="row">
+            <div className="form-group">
+                <input type="text" name="ten" className="form-control"/>
+                <div className="btn btn-block btn-success" onClick={() => this.saveClick()}>Save</div>
+            </div>
+        </div>
+    )
+
+    displayCheck = () =>{
+        if(this.state.trangThai === 0){
+            return this.renderButton();
+        }else{
+            return this.renderForm();
+        }
+    }
+    editClick = () =>{
+        this.setState({trangThai:1});
+    }
+
+    saveClick = () =>{
+        this.setState({trangThai:0});
+    }
+
     render() {
         return (
             <div className="col-lg-4">
@@ -30,12 +67,8 @@ class Content extends Component {
                             <p>
                                 {this.props.trichdan}
                             </p>
-                            <div className="row">
-                                <div className="btn btn-group">
-                                    <div className="btn btn-info" onClick={this.thongbao}>Edit</div>
-                                    <div className="btn btn-warning" onClick={this.thongbao2}>Remove</div>
-                                </div>
-                            </div>
+                            {this.displayCheck()}
+                            <hr/>
                         </div>
                     </div>
                 </div>

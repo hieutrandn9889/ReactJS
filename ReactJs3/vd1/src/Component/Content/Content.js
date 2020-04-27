@@ -19,7 +19,7 @@ class Content extends Component {
     renderButton = () =>(
         <div className="row">
             <div className="btn btn-group">
-                <div className="btn btn-info" onClick={() => this.editClick()}>Edit</div>
+                <div className="btn btn-info" onClick={this.editClick}>Edit</div>
                 <div className="btn btn-warning" onClick={this.thongbao2}>Remove</div>
             </div>
         </div>
@@ -29,7 +29,7 @@ class Content extends Component {
         <div className="row">
             <div className="form-group">
                 <input type="text" name="ten" className="form-control"/>
-                <div className="btn btn-block btn-success" onClick={() => this.saveClick()}>Save</div>
+                <div className="btn btn-block btn-success" onClick={this.saveClick}>Save</div>
             </div>
         </div>
     )
@@ -47,6 +47,7 @@ class Content extends Component {
 
     saveClick = () =>{
         this.setState({trangThai:0});
+        this.thongbao()
     }
 
     render() {

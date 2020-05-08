@@ -28,12 +28,12 @@ class Content extends Component {
     renderForm = () =>(
         <div className="row">
             <div className="form-group">
-                <input type="text" name="ten" className="form-control"/>
+                <input ref={(duLieuNhap) => {this.trungGian = duLieuNhap}} defaultValue={this.props.tieude} type="text" name="ten" className="form-control"/>
                 <div className="btn btn-block btn-success" onClick={this.saveClick}>Save</div>
             </div>
         </div>
     )
-
+    
     displayCheck = () =>{
         if(this.state.trangThai === 0){
             return this.renderButton();
@@ -47,7 +47,8 @@ class Content extends Component {
 
     saveClick = () =>{
         this.setState({trangThai:0});
-        this.thongbao()
+        console.log(this.trungGian.value)
+        // this.thongbao()
     }
 
     render() {

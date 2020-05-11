@@ -5,6 +5,13 @@ import TopMenu from './Component/TopMenu/TopMenu';
 import Header from './Component/Header/Header';
 import Content from './Component/Content/Content';
 import Footer from './Component/Footer/Footer';
+import MapApp from './Component/MapApp/MapApp';
+import LifeCycleMounting from './Component/LifeCycle/LifeCycleMounting';
+import LifeCycleUpdationState from './Component/LifeCycle/LifeCycleUpdationState';
+import LifeCycleUpdationProps from './Component/LifeCycle/LifeCycleUpdationProps';
+
+
+
 const a1="hieu";
 // khai bao theo ham bt
 function One() {
@@ -78,23 +85,6 @@ class JSXApp extends Component {
   }
 }
 
-//map
-const so = [1,2,3,4,5,6,7,8,9]
-const so1 = so.map((x) =>(x*2+ ","))
-const so2 = so.map( (x)=> (
-  <li>So: {x}</li>
-));
-class MapApp extends Component {
-  render() {
-    return (
-      <div>
-        {so1}
-        {so2}
-      </div>
-    );
-  }
-}
-
 //run commom
 function App() {
   return (
@@ -115,14 +105,20 @@ function App() {
         </div>
      </div>
      <Footer/>
-      {/* <MapApp/>
+      {/* 
+      <MapApp/>
       <JSXApp/>
       <PropsOne tieuDe="Dung props theo cach 1 su dung function" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />
       <PropsTwo tieuDe="Dung props theo cach 2 su dung class" linkAnh="https://kenh14cdn.com/2020/4/7/9259164428738153793622975906720805378588672n-1586265443630314075999.jpg" />
       <One />
       <Two />
       <Three />
-      <Four /> */}
+      <Four />
+      <LifeCycleMounting/>
+      <LifeCycleUpdationState/>
+      */}
+      <LifeCycleUpdationProps/>
+      
     </div>
   );
 }

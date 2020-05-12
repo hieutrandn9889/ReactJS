@@ -4,29 +4,23 @@ class LifeCycleUpdationProps extends Component{
     constructor(props){
       super(props);
       this.state = {
-        trangThaiProps:"khoiTaoProps"
+        trangThai1:"khoiTaoProps1",
+        trangThai2:"khoiTaoProps2"
       }
-    }
-    componentWillUpdate(){
-        console.log("componentWillUpdate da chay");
-    }
-    componentDidUpdate(){
-        console.log("componentDidUpdate da chay");
     }
 
     capNhapState =() => {
         this.setState({
-            trangThai:"Trang thai dc update"
+          trangThai1:"Trang thai dc update 1",
+          trangThai2:"Trang thai dc update 2"
         });
     }
 
     render() {
-      console.log("Day la ham render da chay");
-      console.log(this.state.trangThaiProps);
-      
+      console.log(this.state.trangThai1);
       return(
         <div>
-            <NoiDungUpdationProps ten={this.state.trangThaiProps}></NoiDungUpdationProps>
+            <NoiDungUpdationProps ten={this.state.trangThai2}></NoiDungUpdationProps>
             <button onClick={() => this.capNhapState()}>Click to update state</button>
         </div>
       )

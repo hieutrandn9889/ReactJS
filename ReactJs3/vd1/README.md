@@ -13,3 +13,7 @@ componentWillMount >> render >> componentDidMount
 - Updation state:
 shouldComponentUpdate (true)  >> componentWillUpdate >> render >> componentDidUpdate
 shouldComponentUpdate (false) >> shouldComponentUpdate da chay
+
+- Updation props:
+componentWillReceiveProps >> shouldComponentUpdate (true)  >> componentWillUpdate >> render >> componentDidUpdate
+shouldComponentUpdate (false) >> shouldComponentUpdate da chay
